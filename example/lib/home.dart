@@ -237,7 +237,7 @@ class _MaterialTipsPage extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Container(
-            color: Theme.of(context).appBarTheme.color ?? Theme.of(context).primaryColor,
+            color: Theme.of(context).appBarTheme.backgroundColor ?? Theme.of(context).primaryColor,
             height: kToolbarHeight + MediaQuery.of(context).padding.top,
             padding: EdgeInsets.only(
               top: MediaQuery.of(context).padding.top,

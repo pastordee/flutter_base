@@ -15,7 +15,7 @@ void main() {
     runApp(
       ChangeNotifierProvider<AppProvider>.value(
         value: AppProvider(
-          brightness: WidgetsBinding.instance?.window.platformBrightness,
+          brightness: WidgetsBinding.instance.window.platformBrightness,
         ),
         child: const App(),
       ),

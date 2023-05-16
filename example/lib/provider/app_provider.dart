@@ -57,7 +57,7 @@ class AppProvider with ChangeNotifier {
       _themeMode = themeMode;
       switch (_themeMode) {
         case ThemeMode.system:
-          _brightness = WidgetsBinding.instance?.window.platformBrightness;
+          _brightness = WidgetsBinding.instance.window.platformBrightness;
           break;
         case ThemeMode.light:
           _brightness = Brightness.light;

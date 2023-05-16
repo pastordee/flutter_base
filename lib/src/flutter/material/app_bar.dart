@@ -720,7 +720,7 @@ class _AppBarState extends State<AppBar> {
     final bool useCloseButton = parentRoute is PageRoute<dynamic> && parentRoute.fullscreenDialog;
 
     final double toolbarHeight = widget.toolbarHeight ?? kToolbarHeight;
-    final bool backwardsCompatibility = widget.backwardsCompatibility ?? appBarTheme.backwardsCompatibility ?? true;
+    final bool backwardsCompatibility = widget.backwardsCompatibility ?? true;
 
     final Color backgroundColor = backwardsCompatibility
       ? widget.backgroundColor
@@ -748,7 +748,7 @@ class _AppBarState extends State<AppBar> {
 
     TextStyle? toolbarTextStyle = backwardsCompatibility
       ? widget.textTheme?.bodyText2
-        ?? appBarTheme.textTheme?.bodyText2
+        // ?? appBarTheme.bodyText2
         ?? theme.primaryTextTheme.bodyText2
       : widget.toolbarTextStyle
         ?? appBarTheme.toolbarTextStyle
@@ -756,7 +756,7 @@ class _AppBarState extends State<AppBar> {
 
     TextStyle? titleTextStyle = backwardsCompatibility
       ? widget.textTheme?.headline6
-        ?? appBarTheme.textTheme?.headline6
+        // ?? appBarTheme.textTheme?.headline6
         ?? theme.primaryTextTheme.headline6
       : widget.titleTextStyle
         ?? appBarTheme.titleTextStyle
@@ -956,7 +956,7 @@ class _AppBarState extends State<AppBar> {
       );
     }
 
-    final Brightness overlayStyleBrightness = widget.brightness ?? appBarTheme.brightness ?? colorScheme.brightness;
+    final Brightness overlayStyleBrightness = widget.brightness ?? widget.brightness ?? colorScheme.brightness;
     final SystemUiOverlayStyle overlayStyle = backwardsCompatibility
       ? (overlayStyleBrightness == Brightness.dark ? SystemUiOverlayStyle.light : SystemUiOverlayStyle.dark)
       : widget.systemOverlayStyle
@@ -1005,7 +1005,7 @@ class _FloatingAppBarState extends State<_FloatingAppBar> {
     super.didChangeDependencies();
     if (_position != null)
       _position!.isScrollingNotifier.removeListener(_isScrollingListener);
-    _position = Scrollable.of(context)?.position;
+    _position = Scrollable.of(context).position;
     if (_position != null)
       _position!.isScrollingNotifier.addListener(_isScrollingListener);
   }

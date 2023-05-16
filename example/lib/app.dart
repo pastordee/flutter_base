@@ -20,7 +20,7 @@ class _AppState extends State<App> with WidgetsBindingObserver {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance?.addObserver(this);
+    WidgetsBinding.instance.addObserver(this);
   }
 
   @override
@@ -68,7 +68,7 @@ class _AppState extends State<App> with WidgetsBindingObserver {
           scaffoldBackgroundColor: const Color(0xFF191919),
           cardColor: const Color.fromARGB(255, 28, 28, 30),
           appBarTheme: _darkTheme.appBarTheme.copyWith(
-            brightness: Brightness.dark,
+            // brightness: Brightness.dark,
           ),
         );
         return BaseApp(
@@ -100,7 +100,7 @@ class _AppState extends State<App> with WidgetsBindingObserver {
 
   @override
   void didChangePlatformBrightness() {
-    final Brightness? brightness = WidgetsBinding.instance?.window.platformBrightness;
+    final Brightness? brightness = WidgetsBinding.instance.window.platformBrightness;
     final AppProvider appProvider = Provider.of<AppProvider>(context, listen: false);
     if (appProvider != null && appProvider.themeMode == ThemeMode.system && brightness != appProvider.brightness) {
       appProvider.changeBrightness(brightness);
@@ -109,7 +109,7 @@ class _AppState extends State<App> with WidgetsBindingObserver {
 
   @override
   void dispose() {
-    WidgetsBinding.instance?.removeObserver(this);
+    WidgetsBinding.instance.removeObserver(this);
     super.dispose();
   }
 }

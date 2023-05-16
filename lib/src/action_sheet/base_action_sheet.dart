@@ -197,7 +197,7 @@ class BaseActionSheet extends BaseStatelessWidget {
       barrierColor: barrierColor,
       barrierDismissible: barrierDismissible,
       useRootNavigator: useRootNavigator,
-      semanticsDismissible: semanticsDismissible,
+      semanticsDismissible: semanticsDismissible!,
       routeSettings: routeSettings,
       builder: (BuildContext context) {
         return this;
