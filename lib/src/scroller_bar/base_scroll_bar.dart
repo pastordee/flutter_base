@@ -98,7 +98,7 @@ class BaseScrollBar extends BaseStatelessWidget {
     final Widget _scrollbar = CupertinoScrollbar(
       controller: valueOf('controller', controller),
       child: _child,
-      isAlwaysShown: valueOf('isAlwaysShown', isAlwaysShown),
+      // isAlwaysShown: valueOf('isAlwaysShown', isAlwaysShown),
       thickness: valueOf('thickness', thickness) ?? 3.0,
       thicknessWhileDragging: valueOf('thicknessWhileDragging', thicknessWhileDragging),
       radius: valueOf('radius', radius),
@@ -114,9 +114,9 @@ class BaseScrollBar extends BaseStatelessWidget {
     final Widget _scrollbar = Scrollbar(
       child: _child!,
       controller: valueOf('controller', controller),
-      isAlwaysShown: valueOf('isAlwaysShown', isAlwaysShown),
+      // isAlwaysShown: valueOf('isAlwaysShown', isAlwaysShown),
       showTrackOnHover: valueOf('showTrackOnHover', showTrackOnHover),
-      hoverThickness: valueOf('hoverThickness', hoverThickness),
+      // hoverThickness: valueOf('hoverThickness', hoverThickness),
       thickness: valueOf('thickness', thickness),
       radius: valueOf('radius', radius),
       notificationPredicate: valueOf('notificationPredicate', notificationPredicate),
