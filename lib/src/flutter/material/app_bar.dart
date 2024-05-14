@@ -747,20 +747,20 @@ class _AppBarState extends State<AppBar> {
       ?? overallIconTheme;
 
     TextStyle? toolbarTextStyle = backwardsCompatibility
-      ? widget.textTheme?.bodyText2
+      ? widget.textTheme?.bodyMedium
         // ?? appBarTheme.bodyText2
-        ?? theme.primaryTextTheme.bodyText2
+        ?? theme.primaryTextTheme.bodyMedium
       : widget.toolbarTextStyle
         ?? appBarTheme.toolbarTextStyle
-        ?? theme.textTheme.bodyText2?.copyWith(color: foregroundColor);
+        ?? theme.textTheme.bodyMedium?.copyWith(color: foregroundColor);
 
     TextStyle? titleTextStyle = backwardsCompatibility
-      ? widget.textTheme?.headline6
+      ? widget.textTheme?.headlineSmall
         // ?? appBarTheme.textTheme?.headline6
-        ?? theme.primaryTextTheme.headline6
+        ?? theme.primaryTextTheme.headlineSmall
       : widget.titleTextStyle
         ?? appBarTheme.titleTextStyle
-        ?? theme.textTheme.headline6?.copyWith(color: foregroundColor);
+        ?? theme.textTheme.headlineSmall?.copyWith(color: foregroundColor);
 
     if (widget.toolbarOpacity != 1.0) {
       final double opacity = const Interval(0.25, 1.0, curve: Curves.fastOutSlowIn).transform(widget.toolbarOpacity);

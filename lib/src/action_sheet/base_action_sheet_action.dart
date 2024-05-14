@@ -55,7 +55,7 @@ class BaseActionSheetAction extends BaseStatelessWidget {
   @override
   Widget buildByMaterial(BuildContext context) {
     final Widget _child = valueOf('child', child);
-    final TextStyle actionStyle = (Theme.of(context).textTheme.button ?? const TextStyle()).copyWith(
+    final TextStyle actionStyle = (Theme.of(context).textTheme.displayMedium ?? const TextStyle()).copyWith(
       inherit: false,
       fontSize: 20.0,
       fontWeight: isDefaultAction ? FontWeight.bold : FontWeight.w400,

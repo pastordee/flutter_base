@@ -115,7 +115,7 @@ class BaseScrollBar extends BaseStatelessWidget {
       child: _child!,
       controller: valueOf('controller', controller),
       // isAlwaysShown: valueOf('isAlwaysShown', isAlwaysShown),
-      showTrackOnHover: valueOf('showTrackOnHover', showTrackOnHover),
+      // showTrackOnHover: valueOf('showTrackOnHover', showTrackOnHover),
       // hoverThickness: valueOf('hoverThickness', hoverThickness),
       thickness: valueOf('thickness', thickness),
       radius: valueOf('radius', radius),

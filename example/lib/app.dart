@@ -38,7 +38,7 @@ class _AppState extends State<App> with WidgetsBindingObserver {
           hoverColor: Colors.transparent,
           cupertinoOverrideTheme: _cupertinoTheme,
           textTheme: _theme.textTheme.copyWith(
-            bodyText2: _theme.textTheme.bodyText2?.copyWith(
+            bodyMedium: _theme.textTheme.bodyMedium?.copyWith(
               fontSize: 17.0,
               letterSpacing: -0.41,
             ),
@@ -47,7 +47,7 @@ class _AppState extends State<App> with WidgetsBindingObserver {
             // 使FlatButton, OutlineButton，RaisedButton等按钮跟CupertinoButton一样高
             height: 48.0,
           ),
-          backgroundColor: const Color(0xFFEBEBEB),
+          dialogBackgroundColor: const Color(0xFFEBEBEB),
           scaffoldBackgroundColor: const Color(0xFFF5F5FF),
         );
         _darkTheme = _darkTheme.copyWith(
@@ -55,7 +55,7 @@ class _AppState extends State<App> with WidgetsBindingObserver {
           hoverColor: Colors.transparent,
           // cupertinoOverrideTheme: _cupertinoTheme,
           textTheme: _darkTheme.textTheme.copyWith(
-            bodyText2: _darkTheme.textTheme.bodyText2?.copyWith(
+            bodyMedium: _darkTheme.textTheme.bodyMedium?.copyWith(
               fontSize: 17.0,
               letterSpacing: -0.41,
             ),
@@ -64,7 +64,7 @@ class _AppState extends State<App> with WidgetsBindingObserver {
             // 使FlatButton, OutlineButton，RaisedButton等按钮跟CupertinoButton一样高
             height: 48.0,
           ),
-          backgroundColor: Colors.white,
+          dialogBackgroundColor: Colors.white,
           scaffoldBackgroundColor: const Color(0xFF191919),
           cardColor: const Color.fromARGB(255, 28, 28, 30),
           appBarTheme: _darkTheme.appBarTheme.copyWith(
